@@ -15,6 +15,10 @@ require("dotenv").config()
 
 app.use(express.json())
 
+userRouter.get("/",(req,res)=>{
+    res.send({msg:"this default route"})
+})
+
 // route for signup user
 
 userRouter.post("/signup",async(req,res)=>{
